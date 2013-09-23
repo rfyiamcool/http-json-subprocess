@@ -1,4 +1,4 @@
-[root@61 ~]# curl -d '{"args":["if","-a"]}' 10.10.10.61:8000
-{"error": "Traceback (most recent call last):\n  File \"http-json-process.py\", line 29, in do_POST\n    returncode = call(request['args'], stdin=stdin, stdout=stdout, stderr=stderr, shell=shell)\n  File \"/usr/lib/python2.6/subprocess.py\", line 478, in call\n    p = Popen(*popenargs, **kwargs)\n  File \"/usr/lib/python2.6/subprocess.py\", line 639, in __init__\n    errread, errwrite)\n  File \"/usr/lib/python2.6/subprocess.py\", line 1228, in _execute_child\n    raise child_exception\nOSError: [Errno 2] No such file or directory\n"}
+
 [root@61 ~]# curl -d '{"args":["free","-m"]}' 10.10.10.61:8000    
+
 {"returncode": 0, "stderr": "", "stdout": "             total       used       free     shared    buffers     cached\nMem:          1006        646        359          0        127        262\n-/+ buffers/cache:        256        750\nSwap:         1023          0       1023\n"}
